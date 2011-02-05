@@ -1,0 +1,4 @@
+{
+    "db.path": "../db",
+    "db.phrase": "phrase.db"
+}

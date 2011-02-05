@@ -1,0 +1,8 @@
+(?<_KR>\p{Hangul}+)
+#(?<_JP>\p{Hiragana}+)
+#(?<_JP>\p{Katakana}+)
+#(?<_CN>\p{Han}+)
+(?<DIGIT>\p{N}+)
+(?<LAT>\p{Latin}+)
+(?<TOKEN_ETC>\p{L}+)
+(?<PUNCT>\p{P}+)

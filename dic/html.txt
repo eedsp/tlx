@@ -1,0 +1,6 @@
+(?<HTML_TAG><(/?[^\>]+)>)
+#(?<HTML_TAG><(\/|)\p{L}+>)
+(?<HTML_ENTITY>(&\p{L}+;))
+(?<HTML_DEC>(&#\p{N}+;))
+(?<HTML_HEX>(&#x(\p{N}|\p{L})+;))
+(?<AMPERSAND>&{1})

@@ -1,0 +1,5 @@
+(?<_GARBAGE>ㅋ+)
+(?<_GARBAGE>ㅎ+)
+(?<_GARBAGE>ㅠ+)
+(?<_GARBAGE>ㄷ+)
+(?<_GARBAGE>w{5,}+)

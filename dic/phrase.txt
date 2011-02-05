@@ -1,0 +1,21 @@
+은하철도999
+(?<GTX>GTX(\s+|)\d+)
+(?<PHRASE_1>(동해물|백두|백두산))
+(?<EMAIL>(\w+@(\w+\.)+\w+))
+# ####
+(?<URL>(file|gopher|news|nntp|telnet|https?|ftps?|sftp)://[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?)
+(?<URL_S>[A-Za-z\-_]+(\.[A-Za-z\-_]+)+)
+# ####
+(?'Product_Apple_iPhone'((?<iPhone>(iphone|아이폰))(\s+|)[[:digit:]]+([a-z]+|)(\s+(plus|플러스)|)))
+(?<ADDRESS_00>(?<ADDRESS_01>\w+시)((\s+|)(?<ADDRESS_02>\w+구)|)((\s+|)(?<ADDRESS_03>\w+(\d+|)동)|))
+# ####
+(?<TwitterID>(@\w+))
+(?<HashTag>(#\w+))
+# ####
+(?<Floating_point_1>\d+\.\d+e[-+]?\d+)
+(?<Floating_point_2>\d+e[-+]?\d+)
+(\p{L&}{1}\+{2})
+A\/S
+(?<PRODUCT>\bm&m's\b)
+#\b\p{L&}{1}\p{N}{1}\p{L&}{1}\p{N}{1}\b
+#\b\p{L&}{1}\p{N}{1}\p{L&}{1}\b

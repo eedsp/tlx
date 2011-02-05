@@ -1,0 +1,60 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+# .orig files
+*.orig
+
+# binary  files
+bin/*
+lib/*
+
+# script files
+#11.reset.sh
+#00.build.sh
+#22.install.sh
+0.config.h
+.idea/
+script/*
+_UNUSED/*
+_DELETED/*
+README.txt
+00_BACKUP/*
+_build/*
+build/*
+bin/*
+lib/*
+cmake-build-debug
+cmake-build-default
+cmake-build-release
+

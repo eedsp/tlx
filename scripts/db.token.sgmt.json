@@ -1,0 +1,8 @@
+{
+	"app":		"phrase",
+	"i_path":	"../dic",
+	"o_path":	"../db",
+	"t_path":	"../temp",
+	"raw":		"token.sgmt.txt",
+	"dic":		"token.sgmt.db"
+}
