@@ -45,11 +45,11 @@ void vx_normlzr::normalize (const char *pSTR, size_t pSTR_len)
     if (pSTR_len > 0)
     {
         UErrorCode v_error_code_normlzer= U_ZERO_ERROR;
-        const Normalizer2 &v_NFC = *Normalizer2::getNFCInstance(v_error_code_normlzer);
+        const icu::Normalizer2 &v_NFC = *icu::Normalizer2::getNFCInstance(v_error_code_normlzer);
 
         if (U_SUCCESS(v_error_code_normlzer))
         {
-            UnicodeString uSTR_src = UnicodeString::fromUTF8(StringPiece((char *) pSTR, (int32_t)pSTR_len));
+            icu::UnicodeString uSTR_src = icu::UnicodeString::fromUTF8(icu::StringPiece((char *) pSTR, (int32_t)pSTR_len));
 
             UErrorCode status = U_ZERO_ERROR;
             uSTR = v_NFC.normalize((opt_toLowerCase) ? uSTR_src.toLower() : uSTR_src, status);
@@ -76,14 +76,14 @@ extern "C" const char * TEXT_normalize (apr_pool_t *p, const char *pSTR, size_t 
     const char *v_STR = nullptr;
     *v_STR_len = 0;
 
-    UnicodeString uSTR_ucs = UnicodeString::fromUTF8(StringPiece((const char *) pSTR, (int32_t)pSTR_len));
+    icu::UnicodeString uSTR_ucs = icu::UnicodeString::fromUTF8(icu::StringPiece((const char *) pSTR, (int32_t)pSTR_len));
 
     UErrorCode status = U_ZERO_ERROR;
-    const Normalizer2 &nNFC = *Normalizer2::getNFCInstance(status);
+    const icu::Normalizer2 &nNFC = *icu::Normalizer2::getNFCInstance(status);
     if (U_SUCCESS(status))
     {
         status = U_ZERO_ERROR;
-        UnicodeString usNFC = nNFC.normalize((pOPT == 0) ? uSTR_ucs : uSTR_ucs.toLower(), status);
+        icu::UnicodeString usNFC = nNFC.normalize((pOPT == 0) ? uSTR_ucs : uSTR_ucs.toLower(), status);
         if (U_SUCCESS(status))
         {
             usNFC.toUTF8String(szUTF8);

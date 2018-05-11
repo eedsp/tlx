@@ -79,7 +79,7 @@ static void proc_file_read (apr_pool_t *p_pool, v_config_t *pCFG, const char *v_
     std::ifstream is;
     UErrorCode u_status = U_ZERO_ERROR;
 
-    const Normalizer2 &nNFC = *Normalizer2::getNFCInstance(u_status);
+    const icu::Normalizer2 &nNFC = *icu::Normalizer2::getNFCInstance(u_status);
 
     if (U_SUCCESS(u_status))
     {
@@ -92,9 +92,9 @@ static void proc_file_read (apr_pool_t *p_pool, v_config_t *pCFG, const char *v_
             getline(is, szLINE);
 
             v_line++;
-            UnicodeString uSTR_tmp = UnicodeString::fromUTF8(StringPiece(szLINE.c_str()));
+            icu::UnicodeString uSTR_tmp = icu::UnicodeString::fromUTF8(icu::StringPiece(szLINE.c_str()));
             uSTR_tmp.trim();
-            UnicodeString uSTR = nNFC.normalize(uSTR_tmp, u_status);
+            icu::UnicodeString uSTR = nNFC.normalize(uSTR_tmp, u_status);
 
             if (U_SUCCESS(u_status))
             {

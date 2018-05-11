@@ -30,7 +30,7 @@ class vx_normlzr
     vx_normlzr (apr_pool_t *p_pool);
     ~vx_normlzr ();
 
-    UnicodeString uSTR;
+    icu::UnicodeString uSTR;
     size_t uSTR_len;
     const char *vSTR;
     size_t vSTR_len;
